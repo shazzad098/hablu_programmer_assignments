@@ -1,0 +1,223 @@
+@media only screen and (max-width: 768px) {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.header img.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.menu-container {
+    position: relative;
+    z-index: 100;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.header .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: -5px;
+    right: -5px;
+    z-index: 1001;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.header .menu-items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background: white;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .menu-items .nav-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .menu-items .nav-list li {
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.header .menu-items .nav-list li:hover {
+    background-color: #f5f5f5;
+}
+
+.header .menu-items .buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+}
+
+.header .menu-items .buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header .menu-items .buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Animation styles */
+.header .checkbox:checked ~ .menu-items {
+    transform: translateX(0);
+}
+
+.header .checkbox:checked ~ .hamburger-menu .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.header .checkbox:checked ~ .hamburger-menu .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.header .checkbox:checked ~ .hamburger-menu .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+    .hamburger-menu,
+    .header .menu-items,
+    .header .checkbox {
+        display: none;
+    }
+} 
+    .main{
+        .content{
+            width: 90%;
+            height: 50%;
+        }
+
+        .forms{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            .box{
+                width: 100%;
+                height: 3.5vh;
+            }
+        }
+    }
+
+    .buy_sell{
+        height: 30vh;
+        p{
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        img{
+            width: 90%;
+
+        }
+    }
+    .features{
+        h1{
+            font-size: 1.5rem;
+        }
+        .container{
+            .boxs{
+                flex-direction: column;
+                gap: 30px;
+                .box{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .buy-sell{
+        flex-direction: column;
+        height: 100vh;
+        .boxes{
+            gap: 5px;
+        }
+        
+        .txt{
+            p{
+                font-size: 10px;
+            }
+        }
+        button{
+            margin-top: 20px;
+        }
+        .buy{
+            width: 100%;
+            margin-top: -20px;
+        }
+        .sell{
+            width: 100%;
+            margin-top: -50px;
+        }
+    }
+    .buy_crypto{
+        height: 30vh;
+        padding: 10px;
+        h1{
+            font-size:30px;
+            text-align: center;
+        }
+    }
+    .footer{
+        .container{
+            flex-direction: column;
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-bottom{
+            margin-bottom: -50px;
+        }
+    }
+}
